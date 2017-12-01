@@ -40,6 +40,9 @@
      .btn-login{
          margin:  80px 160px 0 160px;
      }
+     .ivu-row-flex{
+         height: 100%;
+     }
     }
 </style>
 <template>

@@ -7,7 +7,7 @@
         left: 0;
         text-align: center;
         h1{
-            height: 150px;
+
             img{
                 height: 100%;
             }
