@@ -8,7 +8,7 @@
 </style>
 <template>
   <div>
-      <Form ref="queryData" :model="queryData" :rules="ruleValidate" :label-width="80"    inline>
+      <Form ref="queryData" :model="queryData" :rules="queryValidate" :label-width="80"    inline>
           <FormItem label="业务编号" prop="wordID">
               <Input type="text" v-model="queryData.wordID"></Input>
           </FormItem>
@@ -26,7 +26,7 @@
               <DatePicker type="date" placeholder="请选择..." v-model="queryData.finishDate"></DatePicker>
           </FormItem>
           <FormItem  :label-width="80">
-              <Button type="primary" @click="handleSubmit('queryData')">搜索</Button>
+              <Button type="primary" @click="handleSubmit('queryData')" icon="ios-search" >搜索</Button>
               <Button type="ghost" @click="handleReset('queryData')" style="margin-left: 10px;border:none;color: blue;font-size: 12px;">高级搜索</Button>
           </FormItem>
       </Form>
@@ -49,7 +49,7 @@
                     submitDate: '',
                     finishDate: ''
                 },
-                ruleValidate: {
+                queryValidate: {
                   wordID: [
                           { required: true, message: 'The field cannot be empty', trigger: 'blur' }
                         ]
