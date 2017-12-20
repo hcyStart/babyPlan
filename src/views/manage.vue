@@ -29,7 +29,7 @@
         <Table border :columns="tableListHeader" :data="tableData"></Table>
     </Col>
     <Col span="8">
-        <Tree :data="data2" show-checkbox></Tree>
+      <Tree :data="data2"  show-checkbox multiple></Tree>
     </Col>
   </Row>
   </div>
@@ -43,11 +43,29 @@
                     roleNo:''
                 },
               tableListHeader: [
-                  {
+                {
                     title: ' ',
                     width: 60,
                     align: 'center',
-                    key:'keyselect'
+                    key:'keyselect',
+                    render: (h, params) => {
+                     return h('RadioGroup', [
+                         h('Radio', {
+                             props:{
+                               name:'roleDataRadio'
+                             },
+                             style: {
+                                 cursor: 'pointer',
+                                 size:'large'
+                             },
+                             nativeOn: {
+                                 click: () => {
+                                     this.selcetData(params.index);
+                                 }
+                             }
+                         })
+                      ]);
+                    }
                   },
                   {
                       title: '序号',
@@ -78,6 +96,7 @@
                                },
                                style: {
                                    cursor: 'pointer',
+                                   transform: 'rotate(35deg)',
                                    marginRight: '5px'
                                },
                                nativeOn: {
@@ -110,35 +129,31 @@
                   {
                       roleName: 'John Brown',
                       No: 1,
-                      roleNo: 'New York No. 1 Lake Park',
-                      date: '2016-10-03'
+                      roleNo: 'New York No. 1 Lake Park'
                   },
                   {
                       roleName: 'Jim Green',
                       No: 2,
-                      roleNo: 'London No. 1 Lake Park',
-                      date: '2016-10-01'
+                      roleNo: 'London No. 1 Lake Park'
                   },
                   {
                       roleName: 'Joe Black',
                       No: 3,
-                      roleNo: 'Sydney No. 1 Lake Park',
-                      date: '2016-10-02'
+                      roleNo: 'Sydney No. 1 Lake Park'
                   },
                   {
                       roleName: 'Jon Snow',
                       No: 4,
-                      roleNo: 'Ottawa No. 2 Lake Park',
-                      date: '2016-10-04'
+                      roleNo: 'Ottawa No. 2 Lake Park'
                   }
               ],
               data2: [
                     {
-                        title: 'parent 1',
+                        title: '全选',
                         expand: true,
                         children: [
                             {
-                                title: 'parent 1-1',
+                                title: '设备',
                                 expand: true,
                                 children: [
                                     {
@@ -172,6 +187,11 @@
                   title: 'User Info',
                   content: `Name：${this.tableData[index].No}<br>Age：${this.tableData[index].roleNo}<br>Address：${this.tableData[index].roleName}`
               })
+          },
+          selcetData(index){
+          this.$Modal.info({
+              title: index,
+          });
           }
         }
     }
