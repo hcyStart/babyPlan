@@ -26,6 +26,14 @@ const routers = [
             title: ''
         },
         component: (resolve) => require(['./views/table.vue'], resolve)
+    },
+    {
+        path: '/manage',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/manage.vue'], resolve)
     }
+
 ];
 export default routers;
