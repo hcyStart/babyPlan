@@ -1,0 +1,39 @@
+"callId": "1499411777-7432",
+            "agentId": "119",
+            "beginDate": "2017-07-07 15:16:28",
+            "endDate": "2017-07-07 15:18:51",
+            "fileName": "Z:\\1\\0\\20170707\\119\\1516171.V3",
+            "servDuration": 143
+
+  "ccID": 1,
+            "vdnID": 1,
+            "callId": "1499411777-7432",
+            "callerNo": "8008",
+            "calleeNo": "668811",
+            "callType": 0,
+            "serviceType": "668811",
+            "userId": "44005252",
+            "userName": "Hui Gong",
+            "agentId": 119,
+            "vtmNo": "PRD8001",
+            "customerInfo": null,
+            "operateId": 5,
+            "beginDate": "2017-07-07 15:16:32",
+            "endDate": "2017-07-07 15:18:50",
+            "servDuration": 138,
+            "fileName": "Z:\\1\\0\\20170707\\119\\151631.wmv"
+
+1. 提取音视频时间
+    音频： "beginDate": "2017-07-07 15:16:28",
+    视频： "beginDate": "2017-07-07 15:16:32",
+
+    差 4 秒
+
+2. 延迟4秒
+    ffmpeg -itsoffset 4 -i 151349.wmv -vcodec copy result.wmv
+
+3. 查看效果
+    00:07 < 1 s
+    00:39 <10 s
+
+结果： 开始同步，之后慢慢就不同步了

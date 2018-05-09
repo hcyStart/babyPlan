@@ -1,0 +1,43 @@
+<div class="main-padding-inner" id="captureMainWarp">
+	<div class="form-condition kindly" onselectstart='return false'>
+		<h2 class="form-header">
+			<label>{tip}</label>
+		</h2>
+	</div>
+	<div id="captureBtnContainer">
+	<!-- 	<button type="button" id="refreshBtn">{refresh}</button> -->
+		<button type="button" id="fileDeleteBtn">{delete}</button>
+		<button type="button" id="exitDeleteBtn">{exitDelete}</button>
+	</div>
+	<div id="captureContainer">
+		<div id="captureImgContainer">
+			<div id="captureBtn">
+				<i id="captureIcon" class="icon"></i>
+				<div>{capture}</div>
+			</div>
+			<div id="uploadBtn">
+				<i id="updateIcon" class="icon"></i>
+				<div>{upload}</div>
+			</div>
+<!-- 			<div class="captureImg">
+				<div id="deleteFileFlagContainer"><i class="deleteFileFlag icon"></i></div>
+				<img src="images/app/capture/HFE2.jpg" class="imgViewer" style="height:_height;width:_width">
+				<div class="captureFileName">HFEsupplementinfomation_signature,pdf</div>
+			</div> -->
+		</div>
+	</div>
+	<form id="uploadForm" enctype="multipart/form-data">
+		<input type="file" name = "multipartFile" id="uploadInput">
+	</form>
+	<button type="button" class="btns next" id="captureContinue">
+	 	{Continue}
+	 	<!-- <i></i>  -->
+	</button>
+	<button type="button"  id="captureSubmit" class="btns next">
+	 	{submit}
+	 	<!-- <i></i>  -->
+	</button>
+	<!-- <img src="images/app/capture/deleteFlag.png" id="colseIframe"> -->
+	<div id="colseIframe" class="viewer-button viewer-close" data-action="mix" title="Close"></div>
+	<div id='iframeContainer'></div>
+</div>

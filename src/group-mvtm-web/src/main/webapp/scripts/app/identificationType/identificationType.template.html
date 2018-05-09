@@ -1,0 +1,114 @@
+<div class="header">
+	<!-- <div id="vInfoInOthers"></div> -->
+	<a class="logo"></a>
+	<h1>{account}</h1>
+	<button id="exit">
+		<b class='icon exit-icon'></b>
+		{backtohome}
+	</button>
+</div>
+<div class="container">
+	<div class="main-lefter">
+		<div class="status-bar">
+			<div class="clearfix box">
+				<h2>
+					<em></em>{preparation}
+				</h2>
+				<ul>
+					<li><em></em><span>{IdentityVverification}</span></li>
+					<li><em></em><span>{CollectDocuments}</span></li>
+				</ul>
+			</div>
+
+
+			<div class="clearfix box">
+				<h2>
+					<em></em>{application}
+				</h2>
+				<ul>
+					<li><em></em><span>{AccountType}</span></li>
+					<li><em></em><span>{AccountInformation}</span></li>
+					<li><em></em><span>{PhoneBanking}</span></li>
+					<li><em></em><span>{OpenVideo}</span></li>
+					<li><em></em><span>{AccountAgreement}</span></li>
+					<li><em></em><span>{VerifyApplication}</span></li>
+					<li><em></em><span>{setPassword}</span></li>
+					<li><em></em><span>{setPasswordAgain}</span></li>
+				</ul>
+			</div>
+
+			<div class="clearfix box">
+				<h2 class="twoLine">
+					<em></em>{services}
+				</h2>
+				<ul>
+					<li><em></em><span>{downloadApps}</span></li>
+					<li><em></em><span>{focusWeChat}</span></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="formData"></div>
+		<div class="main-padding" id="view-part-container">
+			<div class="identificationType">
+				<div class="form-condition kindly" onselectstart='return false'>
+					<h2 class="form-header">
+						<label>{tip}</label>
+					</h2>
+				</div>
+				<div id="identification">
+					<div class="idType">
+						<div>
+							<img class="smallImg" src="./images/app/identificationType/icon_idcard1.png"/>
+							<p>{idCard}</p>
+						</div>
+						<div class="selectIdentification resident">
+							{selectIdCard}
+						</div>
+					</div>
+					<div class="idType">
+						<div>
+							<img src="./images/app/identificationType/icon_passport.png"/>
+							<p>{passport}</p>
+						</div>
+						<div class="selectIdentification" data-id-type="P">
+							{selectPassport}
+						</div>
+					</div>
+					<div class="idType">
+						<div>
+							<img class="smallImg" src="./images/app/identificationType/icon_card.png"/>
+							<p>{taiwan}</p>
+						</div>
+						<div class="selectIdentification" data-id-type="T">
+							{selectTaiwan}
+						</div>
+					</div>
+					<div class="idType">
+						<div>
+							<img class="smallImg" src="./images/app/identificationType/icon_card_type_4.png"/>
+							<p>{gangao}</p>
+						</div>
+						<div class="selectIdentification" data-id-type="H">
+							{selectGangao}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button type="button" class="btns next disabled" id="identificationType-next" disabled=true>
+				{Confirm}
+				<!-- <i></i> -->
+			</button>
+		</div>
+	</div>
+	<div class="main-righter">
+		<!-- <button type="button" class="btns exit" id="js-exit">
+			{exit}
+			<i></i>
+		</button> -->
+	</div>
+</div>

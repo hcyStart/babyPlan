@@ -1,0 +1,87 @@
+<div class="pdfBox">
+	<div class="account-type-box" id='accountDeatilContainer'>
+	    <div class="account-type">
+	        <!-- 此处新ui3.31中，内容没有左内边距，所以下面的form-inline不可用，改为form-inline-no -->
+	        <div class="form-inline-no">
+	            <div class="select-card" id="select-card">
+	                <ul>
+	                    <li>
+	                        <div class="select-card-left fl">
+	                            <img src="images/app/accountType/premiercard.png" />
+	                            <h2 class='account-type-name'>{Premier}</h2>
+	                        </div>
+	                        <div class="select-card-center fl select-card-title">
+	                        	<h2 class="title account-type-title asdf">{Benefits}</h2>
+	                            <p>{Dedicated}</p>
+	                            <p>{Anytime}</p>
+	                            <p>{Enjoy}</p>
+	                        
+	                            <h2 class="title account-type-title features">{Eligibility}</h2>
+	                            <div class='min-deposit-amount'>{Minimum}
+	                            <!-- <div class='question-mark' id='premierDetailQuestionMark'>?<div id='premierDetail' class='account-detail'>{premierDetail}</div></div> -->
+	                            </div>
+	                        </div>
+	                        <div class="select-card-right fr select-cards">
+	                            <input type="radio" name="idCard" id="premier-card" data-type="P" />
+	                            <div class="radiobox">{SelectPremier}</div>
+	                        </div>
+	                    </li>
+	
+	                    <li>
+	                        <div class="select-card-left fl">
+	                            <img src="images/app/accountType/advancecard.png" />
+	                            <h2 class='account-type-name'>{Advance}</h2>
+	                            
+	                        </div>
+	                        <div class="select-card-center fl select-card-title">
+	                        	 <h2 class="title account-type-title">{Benefits}</h2>
+	                            <p>{Convenient}</p>
+	                            <p>{Tailored}</p>
+	                            <p>{preferential}{rewards}</p>
+	                        
+	                            <h2 class="title account-type-title features">{Eligibility}</h2>
+	                            <div class='min-deposit-amount'>{Total}
+	                            <!-- <div class='question-mark' id='advanceDetailQuestionMark'>?<div id='advanceDetail' class='account-detail'>{advanceDetail}</div></div> -->
+	                            </div>
+	                        </div>
+	                        <div class="select-card-right fr select-cards">
+	                            <input type="radio" name="idCard" id="advance-card" data-type="A" />
+	                            <div class="radiobox">{SelectAdvance}</div>
+	                        </div>
+	                    </li>
+	                  
+	                   <li>
+	                        <div class="select-card-left fl">
+	                            <img src="images/app/accountType/personalcard.png" />
+	                            <h2 class='account-type-name'>{Personal}</h2>
+	                            
+	                        </div>
+	                        <div class="select-card-center fl select-card-title">
+	                        	<h2 class="title account-type-title">{Benefits}</h2>
+	                            <p>{SalaryAccount}</p>
+	                            <p>{Discount}</p>
+	                            <p>{charge}</p>
+	                        
+	                            <h2 class="title account-type-title features">{Eligibility}</h2>
+	                            <div class='min-deposit-amount'>{describe}</div>
+	                        </div>
+	                        <div class="select-card-right fr select-cards">
+	                            <input type="radio" name="idCard" id="staffPremier-card" data-type="O" />
+	                            <div class="radiobox">{SelectPersonal}</div>
+	                        </div>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="showPdf" id="showPdf-agree">
+	        <div class="showImg"></div>
+	        <span class="closePdf" id="closePdf"></span>
+	        <div class="loading"></div>
+	    </div>
+	</div>
+</div>
+<button type="button" id="accountType-next" class="btns next disabled" disabled=true>
+	{continue}
+   <!--  <i></i> -->
+</button>

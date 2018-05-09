@@ -1,0 +1,42 @@
+<div class="view-login">
+    <!-- <h2>User Sign IN</h2> -->
+    <span id="vInfoInLogin"></span>
+    <div class="logo">
+    	<img src="./images/app/home/mvtm_logo_en.png"/>
+    </div>
+    <div class="loginLanguage">
+    	<div class="defaultEnglish">
+    		<span>{english}</span>
+    		<i class="icon icon-language"></i>
+    	</div>
+    	<div class="select">
+    		<div class="selectEnglish">{english}</div>
+    		<div class="selectChinese">{chinese}</div>
+    	</div>
+    	<i class="icon icon-warn"></i>
+    </div>
+    <div class="login-form">
+        <ul>
+        	<li>
+        		<em>{logon}</em>
+        	</li>
+        	<li>
+        		<em class="title">{title}</em>
+                <em class="noAuthority">{noAuthority}</em>
+                <em class="InputError">{InputError}</em>
+                <em class="requestError">{requestError}</em>
+        	</li>
+            <li>
+                <em>{username}</em>
+                <input type="text" class="text" name="username" placeholder="{enterUsername}" id="username" autofocus="autofocus"/>
+            </li>
+            <li>
+                <em>{Password}</em>
+                <input type="password" class="text" name="password" placeholder="{enterPassword}" id="password" autocomplete="off" />
+            </li>
+            <li class="btnPosition">
+                <input type="button" class="btn js-click disabled" id="js-login" value="{denglu}" disabled/>
+            </li>
+        </ul>
+    </div>
+</div>

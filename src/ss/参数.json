@@ -1,0 +1,70 @@
+：
+{
+    "retcode": "0000",
+    "result": {
+        "voiceList": [{
+            "callId": "1499411777-7432",
+            "agentId": "119",
+            "beginDate": "2017-07-07 15:16:28",
+            "endDate": "2017-07-07 15:18:51",
+            "fileName": "Z:\\1\\0\\20170707\\119\\1516171.V3",
+            "servDuration": 143
+        }],
+        "operateList": [{
+            "ccID": 1,
+            "vdnID": 1,
+            "callId": "1499411777-7432",
+            "callerNo": "8008",
+            "calleeNo": "668811",
+            "callType": 0,
+            "serviceType": "668811",
+            "userId": "44005252",
+            "userName": "Hui Gong",
+            "agentId": 119,
+            "vtmNo": "PRD8001",
+            "customerInfo": null,
+            "operateId": 0,
+            "beginDate": "2017-07-07 15:16:31",
+            "endDate": "2017-07-07 15:18:50",
+            "servDuration": 139,
+            "fileName": null
+        }, {
+            "ccID": 1,
+            "vdnID": 1,
+            "callId": "1499411777-7432",
+            "callerNo": "8008",
+            "calleeNo": "668811",
+            "callType": 0,
+            "serviceType": "668811",
+            "userId": "44005252",
+            "userName": "Hui Gong",
+            "agentId": 119,
+            "vtmNo": "PRD8001",
+            "customerInfo": null,
+            "operateId": 1,
+            "beginDate": "2017-07-07 15:16:31",
+            "endDate": "2017-07-07 15:18:50",
+            "servDuration": 139,
+            "fileName": null
+        }, {
+            "ccID": 1,
+            "vdnID": 1,
+            "callId": "1499411777-7432",
+            "callerNo": "8008",
+            "calleeNo": "668811",
+            "callType": 0,
+            "serviceType": "668811",
+            "userId": "44005252",
+            "userName": "Hui Gong",
+            "agentId": 119,
+            "vtmNo": "PRD8001",
+            "customerInfo": null,
+            "operateId": 5,
+            "beginDate": "2017-07-07 15:16:32",
+            "endDate": "2017-07-07 15:18:50",
+            "servDuration": 138,
+            "fileName": "Z:\\1\\0\\20170707\\119\\151631.wmv"
+        }]
+    },
+    "msg": "SUCCESS"
+}

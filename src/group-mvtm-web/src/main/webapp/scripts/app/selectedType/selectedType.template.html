@@ -1,0 +1,43 @@
+<div class="selectedType">
+	<div id="cardType" class="cardType">
+		<h2 class="form-header">
+			<span></span>
+			<label>{Terms}</label>
+		</h2>
+	</div>
+	<div class="cardTypeDeTail">
+		<div class="cardImg">
+			<img class="premierImg" src="images/app/accountType/premiercard.png">
+			<img class="advanceImg" src="images/app/accountType/advancecard.png">
+		</div>
+		<div class="term-en">
+			<a href="#" class="termsPremier terms" id="premierType" data-name="premier">
+				{PremierTerms}
+				<i class="icon icon-chevron-right">
+				</i>
+			</a>
+			<a href="#" class="termsAdvance terms" id="advanceType" data-name="advance">
+				{AdvanceTerms}
+				<i class="icon icon-chevron-right">
+				</i>
+			</a>
+		</div>	
+	</div>	
+	
+	<div class="acceptTerm-en">
+		<label class="accountCheck" id="accountCheck">
+			<span class="no-check" id="accountCheckBox"></span>
+			<input type="checkBox" name="acceptCheckBox" id="acceptCheckBox" class="acceptCheck" disabled="disabled">
+			<div class="acceptText">{accept}</div>
+		</label>
+	</div>
+	<div class="showPdf" id="showPdf-agree">
+	        <div class="showImg"></div>
+	        <span class="closePdf" id="closePdf"></span>
+	        <div class="loading"></div>
+	</div>
+</div>
+<a class="btns next disabled" id="selectedType-next">
+		<span>{continue}</span>
+		<i></i>
+</a>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/jee 
+		http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+	<import resource="classpath*:chinasofti/vtmsln/applicationContext-core.xml" />
+	<import resource="classpath*:chinasofti/vtmsln/web/applicationContext-web.xml" />
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.chinasofti.mvtm.facade"></context:component-scan>
+	
+	<bean id="webAppVersion" class="java.lang.String">
+		<constructor-arg value="V2.1.1.20180322_alpha"/>
+	</bean>
+	
+	<mvc:interceptors>
+        <bean class="com.chinasofti.vtmsln.support.AuthenticationInterceptorForMvtmAdapter"></bean>
+    </mvc:interceptors> 
+    
+    <util:map id="domainJndiMapping">
+        <entry key="vtcService" value="#{vtcService}/group-vtc-service-prd/service" />
+    </util:map>
+    <jee:jndi-lookup id="vtcService" jndi-name="GROUP/CHINASOFTI/VTC/SERVICE_URL/PRD" 
+        default-value="http://localhost:8080" expected-type="java.lang.String" resource-ref="true"></jee:jndi-lookup>
+	
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+</beans>

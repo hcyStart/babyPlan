@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.chinasofti</groupId>
+		<artifactId>group-vtm-sln-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../group-vtm-sln-parent</relativePath>
+	</parent>
+	<artifactId>group-mvtm-web</artifactId>
+	<packaging>war</packaging>
+	<name>group-mvtm-web</name>
+	<description>group-mvtm-web</description>
+	<dependencies>
+        <dependency>
+            <groupId>com.chinasofti</groupId>
+            <artifactId>group-vtm-web-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

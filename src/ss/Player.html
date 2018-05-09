@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>VTM</title>
+    <script type="text/javascript">
+        function initScreen() {
+
+            AudioPlayer.settings.autoStart = false;
+            VideoPlayer.settings.autoStart = false;
+
+            // SIT
+            //VideoPlayer.URL = "https://hkl102620.hk.hsbc:31000/group-vtm-sln-content-service/service/content/repository/temp/media/share/voice/1/0/20170411/163/093345.wmv";
+            //AudioPlayer.URL = "https://hkl102620.hk.hsbc:31000/group-vtm-sln-content-service/service/content/repository/temp/media/share/voice/1/0/20170411/163/0938482.V3";
+
+            // UAT   
+            //VideoPlayer.URL = "https://uat-f5-vtm-vta-cn.hk.hsbc:30001/group-vtm-sln-content-service/service/content/repository/temp/media/share/voice/1/0/20170411/132/093735.wmv";
+            //AudioPlayer.URL = "https://uat-f5-vtm-vta-cn.hk.hsbc:30001/group-vtm-sln-content-service/service/content/repository/temp/media/share/voice/1/0/20170411/132/0937293.V3";
+
+            // local file
+            VideoPlayer.URL = "./result.wmv";
+            AudioPlayer.URL = "./1516171.V3";
+
+            timer = setInterval(function() {
+                AudioPlayer.settings.mute = VideoPlayer.settings.mute;
+                if (!VideoPlayer.settings.mute) {
+                    AudioPlayer.settings.volume = VideoPlayer.settings.volume;
+                }
+            }, 500);
+        }
+    </script>
+</head>
+
+<body onload="initScreen()">
+    <!-- Play Back -->
+    <div>
+        <div id="playback-audio" class="youku" style="display: none;">
+            <object ID="AudioPlayer" CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" height="0" width="0">
+				<param name="uiMode" value="none">
+    		</object>
+        </div>
+
+        <div id="playback-video" class="youku" style="display: none;">
+            <object ID="VideoPlayer" CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" height="540" width="960">
+    		</object>
+        </div>
+    </div>
+
+    <script for="VideoPlayer" event="PlayStateChange(NewState)">
+        switch (NewState) {
+            case 1:
+                AudioPlayer.controls.stop();
+                break;
+            case 2:
+                AudioPlayer.controls.pause();
+                break;
+            case 3:
+                AudioPlayer.controls.play();
+                break;
+            case 4:
+                AudioPlayer.controls.fastForward();
+                break;
+            case 5:
+                AudioPlayer.controls.fastReverse();
+                break;
+        }
+    </script>
+    <script for="VideoPlayer" event="PositionChange(oldPosition,newPosition)">
+        AudioPlayer.controls.currentPosition = newPosition;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+define([],function() {
+   var stepMaping = {
+		 //所有页面都是在有网的状态
+   		/*"showIdCard":"showIdCard",
+   		"idNo":"capture",
+   		"capture":"capture",
+   		"accountType":"accountType",
+   		"telephoneBankChoice":"telephoneBankChoice",
+   		"faceToface":"faceToface",
+   		"readyTurnOnCamera":"faceToface",
+   		"turnOnCameraWaiting":"faceToface",
+   		"turnOnCamera":"faceToface",
+   		"understandTnc":"faceToface",
+   		"openFileForSign":"faceToface",
+   		"displayQR":"displayQR",
+   		"displayWeChat":"displayWeChat",
+   		"rateExperience":"rateExperience",
+   		"captureSubmit":"capture",
+   		"scanBankCard":"scanBankCard",
+   		"reminder":"reminder",
+   		"reminderForTelBank":"reminderForTelBank",
+   		"enterPassword":"reminder",
+   		"enterAgain":"reminder",
+   		"phoneBankNumber":"reminderForTelBank",
+   		"phoneBankNumberAgain":"reminderForTelBank",
+   		"stepData": {
+   			"captureSubmit":"captureSubmit",
+   			"capture":"capture",
+   			"rateExperience":"rateExperience"
+ 		 }*/
+		   //有些页面是可以没有网的
+		   "showIdCard":"showIdCard",
+	   		"idNo":"capture",
+	   		"capture":"capture",
+	   		"accountType":"capture",
+	   		"scanBankCard":"capture",
+	   		"telephoneBankChoice":"capture",
+	   		"faceToface":"faceToface",
+	   		"readyTurnOnCamera":"faceToface",
+	   		"turnOnCameraWaiting":"faceToface",
+	   		"turnOnCamera":"faceToface",
+	   		"understandTnc":"faceToface",
+	   		"openFileForSign":"faceToface",
+	   		"displayQR":"displayQR",
+	   		"displayWeChat":"displayQR",
+	   		"rateExperience":"displayQR",
+	   		"captureSubmit":"capture",
+	   		"reminder":"reminder",
+	   		"reminderForTelBank":"reminderForTelBank",
+	   		"enterPassword":"reminder",
+	   		"enterAgain":"reminder",
+	   		"phoneBankNumber":"reminderForTelBank",
+	   		"phoneBankNumberAgain":"reminderForTelBank",
+	   		"stepData": {
+	   			"captureSubmit":"captureSubmit",
+	   			"capture":"capture",
+	   			"rateExperience":"rateExperience"
+	 		 }
+   }
+   return stepMaping;
+});

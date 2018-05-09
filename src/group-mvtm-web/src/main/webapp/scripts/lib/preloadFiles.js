@@ -1,0 +1,164 @@
+define(function () {
+var preloadFiles = [//others
+    "text!../../../css/reset-zh.css",
+	"../../app", 
+	"../wosa", 
+	"../bootstrap",
+	"../util", 
+	"jquery", 
+	"codeAndTip", 
+	"../BaseController", 
+	"../BaseModel",
+	"checkInternet", 
+	"versionInfo", 
+//login
+	"./login", 
+	"./login.model", 
+	"text",
+	"./login.controller", 
+	"preloadTC", 
+	
+	"text!../login/login.template.html", 
+	"text!../../../index.html",
+//home
+	"../home/home",
+	"../home/home.controller",
+	"../home/home.model",
+	"text!../home/home.template.html",
+	"../dialog/dialog",
+	"popup",
+	"../dialog/dialog.model",
+	"text!../dialog/dialog.template.html",
+	"../dialog/dialog.controller",
+//identificationType
+	"../identificationType/identificationType",
+	"../identificationType/identificationType.controller",
+	"../identificationType/identificationType.model",
+	"text!../identificationType/identificationType.template.html",
+	"../comInterface",
+//scanId
+	"../scanId/scanId", 
+	"../scanId/scanId.controller", 
+	"../scanId/scanId.model", 
+	"text!../scanId/scanId.template.html", 
+//waiting
+	"../waiting/waiting", 
+	"../waiting/waiting.controller", 
+	"../waiting/waiting.model", 
+	"text!../waiting/waiting.template.html", 
+//takeIdCard
+	"../takeIdCard/takeIdCard", 
+	"../takeIdCard/takeIdCard.controller",
+	"../takeIdCard/takeIdCard.model",
+	"text!../takeIdCard/takeIdCard.template.html",
+//showIdCard
+	"../showIdCard/showIdCard", 
+	"../showIdCard/showIdCard.controller", 
+	"../showIdCard/showIdCard.model", 
+	"text!../showIdCard/showIdCard.template.html", 
+//idNo
+	"../idNo/idNo", 
+	"../idNo/idNo.controller", 
+	"../idNo/idNo.model", 
+	"text!../idNo/idNo.template.html", 
+	"systemResumeMapping",
+//capture
+	"../capture/capture",
+	"../capture/capture.controller",
+	"../capture/capture.model",
+	"text!../capture/capture.template.html",
+	"viewer", 
+//accountType
+	"../accountType/accountType",
+	"../accountType/accountType.controller",
+	"../accountType/accountType.model",
+	"text!../accountType/accountType.template.html",
+//scanBankCard
+	"../scanBankCard/scanBankCard",
+	"../scanBankCard/scanBankCard.controller",
+	"../scanBankCard/scanBankCard.model",
+	"text!../scanBankCard/scanBankCard.template.html",
+//telephoneBankChoice
+	"../telephoneBankChoice/telephoneBankChoice",
+	"../telephoneBankChoice/telephoneBankChoice.controller",
+	"../telephoneBankChoice/telephoneBankChoice.model",
+	"text!../telephoneBankChoice/telephoneBankChoice.template.html",
+//faceToface
+	"../faceToface/faceToface",
+	"../faceToface/faceToface.controller",
+	"../faceToface/faceToface.model",
+	"text!../faceToface/faceToface.template.html",
+//readyTurnOnCamera
+	"../readyTurnOnCamera/readyTurnOnCamera",
+	"../readyTurnOnCamera/readyTurnOnCamera.controller",
+	"../readyTurnOnCamera/readyTurnOnCamera.model",
+	"text!../readyTurnOnCamera/readyTurnOnCamera.template.html",
+//turnOnCamera
+	"../turnOnCamera/turnOnCamera",
+	"../turnOnCamera/turnOnCamera.controller",
+	"../turnOnCamera/turnOnCamera.model",
+	"text!../turnOnCamera/turnOnCamera.template.html",
+//turnOnCameraWaiting
+	"../turnOnCameraWaiting/turnOnCameraWaiting",
+	"../turnOnCameraWaiting/turnOnCameraWaiting.controller",
+	"../turnOnCameraWaiting/turnOnCameraWaiting.model",
+	"text!../turnOnCameraWaiting/turnOnCameraWaiting.template.html",
+//understandTnc
+	"../understandTnc/understandTnc",
+	"../understandTnc/understandTnc.controller",
+	"../understandTnc/understandTnc.model",
+	"text!../understandTnc/understandTnc.template.html",
+	
+//openFileForSign
+	"../openFileForSign/openFileForSign",
+	"../openFileForSign/openFileForSign.controller",
+	"../openFileForSign/openFileForSign.model",
+	"text!../openFileForSign/openFileForSign.template.html",
+//reminder
+	"../reminder/reminder",
+	"../reminder/reminder.controller",
+	"../reminder/reminder.model",
+	"text!../reminder/reminder.template.html",
+//enterPassword
+	"../enterPassword/enterPassword",
+	"../enterPassword/enterPassword.controller",
+	"../enterPassword/enterPassword.model",
+	"text!../enterPassword/enterPassword.template.html",
+//enterAgain
+	"../enterAgain/enterAgain",
+	"../enterAgain/enterAgain.controller",
+	"../enterAgain/enterAgain.model",
+	"text!../enterAgain/enterAgain.template.html",
+//reminderForTelBank
+	"../reminderForTelBank/reminderForTelBank",
+	"../reminderForTelBank/reminderForTelBank.controller",
+	"../reminderForTelBank/reminderForTelBank.model",
+	"text!../reminderForTelBank/reminderForTelBank.template.html",
+//phoneBankNumber
+	"../phoneBankNumber/phoneBankNumber",
+	"../phoneBankNumber/phoneBankNumber.controller",
+	"../phoneBankNumber/phoneBankNumber.model",
+	"text!../phoneBankNumber/phoneBankNumber.template.html",
+//phoneBankNumberAgain	
+	"../phoneBankNumberAgain/phoneBankNumberAgain",
+	"../phoneBankNumberAgain/phoneBankNumberAgain.controller",
+	"../phoneBankNumberAgain/phoneBankNumberAgain.model",
+	"text!../phoneBankNumberAgain/phoneBankNumberAgain.template.html",
+//displayQR
+	"../displayQR/displayQR",
+	"../displayQR/displayQR.controller",
+	"../displayQR/displayQR.model",
+	"text!../displayQR/displayQR.template.html",
+//displayWeChat
+	"../displayWeChat/displayWeChat",
+	"../displayWeChat/displayWeChat.controller",
+	"../displayWeChat/displayWeChat.model",
+	"text!../displayWeChat/displayWeChat.template.html",
+//rateExperience
+	"../rateExperience/rateExperience",
+	"../rateExperience/rateExperience.controller",
+	"../rateExperience/rateExperience.model",
+	"text!../rateExperience/rateExperience.template.html"]
+	
+	return preloadFiles;
+});

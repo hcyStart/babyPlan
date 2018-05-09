@@ -1,0 +1,63 @@
+/* css reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{letter-spacing:-1px}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,select{font-family:"UniversNextforHSBC";}
+
+/*.home .homo-topnav .btn span{margin: 30px 0 0 25px; font-family:"Microsoft YaHei","微软雅黑" !important;}*/
+.home .match-condition li span{line-height:42px !important;}
+.header .remote span{line-height: 25.5px;}
+.account-agreement p{line-height: 26px;}
+.kindly .infos p{line-height: 26px;}
+.status-bar .box h2.twoLine{box-sizing:border-box; padding-top:17px; line-height:40px;}
+.status-bar .box h2.twoLine em{margin-top:-14px;}
+.status-bar .active-bg h2.no-subItem.twoLine em{background-position-y:35px;}
+.form-inline .select-box{float: right; padding-top:0!important;}
+.takeCardBefore .title-one { padding-top: 160px !important;}
+.takeCardBefore .serverList{ padding-top:50px !important;}
+.morerow{text-align:left!important;}
+.ts .icon{position:absolute; top: 26px; right:-42px;}
+.numpad{top:385px;}
+
+/*spring16开发   displayWeChat */
+.tips-words{font-size: 30px;line-height: normal;padding-top: 24px;height:93px;}
+.form-bottom .bottom-information{padding-top: 25px;}
+
+/*spint16 phoneBankingtnc*/
+.phoneBankingtnc .form-condition .tnc-content{/* width:410px; */}
+.phoneBankingtnc .form-condition .form-inline .agree-term{font-size:24px;height:44px;}
+
+.form-center-QR .tips-words{font-size:30px;}
+/*sprint16 accountType页面样式修改*/
+.account-type .select-card li .select-card-title .title{font-size:20px;}
+.account-type .select-card li p,.min-deposit-amount{font-size:18px;line-height:30px;}
+.account-type .terms-premier, .account-type .terms-advance{
+    line-height:56px;
+    background: #EAEAEA url(../images/app/accountType/icon_selectaccountpage.png) no-repeat 29px center;
+}
+#premierDetail{font-size:16px;width:295px;}
+#advanceDetail{font-size:16px;width:397px;}
+
+/* understandTnc */
+.understandTnc .tncItem .item .arrow{right:20px;top:20px;}
+.understandTnc .tncItem .item{height:76px;font-size:22px;}
+.understandTnc .tncItem .item span{display:inline-block;width:77%;position:relative;top:13px;right:-5px;}
+.understandTnc .tncItem .item .itemIcon::before{top:9px;}
+.understandTnc .tncItem .item .itemContiner{top:5px}
+.understandTnc .tncItem .item .open{top:27px;right:10px;margin:0;}
+.agree-term-content-tcAgree{padding:40px 60px 40px 60px;height:404px;}
+
+#openFileForSign span{font-size:22px}
+
+#identification .idType p{height:25px;font-size:22px;}
+
+.rateExperienceStyle{font-size:24px;}
+
+/*home*/
+.home .match-condition .card-ico{width:60px;height:60px;display:inline-block;vertical-align:middle;margin-left:-100px;margin-right:15px;}
+.home .match-condition .address-ico{width:60px;height:60px;margin-left:140px;margin-right:15px;float:left;}
+.home .match-condition .address{float:left;text-align:left}
+
+#phoneBankDescribe{margin-left: 30px;padding-top: 20px;}
+
+.header .logo{ position: absolute; left: 45px; top:26px; width:209px; height: 40px; background: url(../images/app/home/mvtm_logo_en.png) no-repeat;}
+
+.bottomWarning{font-size:24px;}
